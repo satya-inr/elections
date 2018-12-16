@@ -20,9 +20,9 @@ contract Elections {
     uint public candidatesCount;
 
     //voted Event
-    event vodedEvent(
-        uint indexed _candidateId;
-    )
+    event votedEvent(
+        uint indexed _candidateId
+    );
 
     //Constructor
     constructor() public {
@@ -49,6 +49,6 @@ contract Elections {
         //update candidat vote count
         candidates[_candidateId].voteCount ++;
 
-        vodedEvent(_candidateId);
+        votedEvent(_candidateId);
     }
 }
